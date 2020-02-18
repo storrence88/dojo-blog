@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.select :user_id, User.all.collect { |user| ["#{user.first_name} #{user.last_name}", user.id] } %>
   </div>
 
   <div class="actions">
